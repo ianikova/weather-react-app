@@ -13,7 +13,10 @@ export default function App() {
       <Main />
       <div class="navbar fixed-bottom signature">
         <small>
-          <a href="https://github.com/ianikova/test-github" target="_blank">
+          <a
+            href="https://github.com/ianikova/weather-react-app"
+            target="_blank"
+          >
             Open-source code
           </a>
           , by Anna Ianikova
