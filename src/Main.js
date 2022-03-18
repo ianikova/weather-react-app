@@ -41,9 +41,12 @@ export default function Main(props) {
     (currentTime.getMinutes() < 10 ? "0" : "") + currentTime.getMinutes()
   }`;
 
+  const [inputCity, setInputCity] = useState("");
   const [city, setCity] = useState("");
   const [loaded, setLoaded] = useState(false);
   const [weather, setWeather] = useState({});
+
+  console.log(loaded);
 
   function weatherDisplay(response) {
     setWeather({
@@ -61,12 +64,13 @@ export default function Main(props) {
   function searchCity(event) {
     event.preventDefault();
     let apiKey = "7991ccdfd610572f9774b2a3ea5cd2a3";
-    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${inputCity}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(weatherDisplay);
+    setCity(inputCity);
   }
 
-  function changeCity(event) {
-    setCity(event.target.value);
+  function changeInputCity(event) {
+    setInputCity(event.target.value);
   }
 
   return (
@@ -80,7 +84,7 @@ export default function Main(props) {
                   type="search"
                   className="form-control search-city"
                   placeholder="Type a city"
-                  onChange={changeCity}
+                  onChange={changeInputCity}
                 />
               </div>
               <button
@@ -92,7 +96,7 @@ export default function Main(props) {
               </button>
             </div>
           </form>
-          <a href="#" id="current-location">
+          <a href="/" id="current-location">
             Current Location
           </a>
         </div>
@@ -102,7 +106,7 @@ export default function Main(props) {
         <div className="row">
           <div className="col-4 side-chosen-city">
             <div>
-              <h1 className="chosen-city"></h1>
+              <h1 className="chosen-city">{city}</h1>
               <h6 id="date-time">{todayDateTime}</h6>
               <div className="row">
                 <div className="col-5">
@@ -118,7 +122,7 @@ export default function Main(props) {
                     </span>
                     <span className="units">
                       <a
-                        href="#"
+                        href="/"
                         id="celsius-link"
                         className="selected-temperature"
                         onClick={showCelsius}
@@ -126,7 +130,7 @@ export default function Main(props) {
                         °C
                       </a>
                       |
-                      <a href="#" id="fahrenheit-link" onClick={showFahrenheit}>
+                      <a href="/" id="fahrenheit-link" onClick={showFahrenheit}>
                         °F
                       </a>
                     </span>

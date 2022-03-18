@@ -1,8 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
-import WeatherSearch from "./WeatherSearch";
 import Navbar from "./Navbar";
-import Search from "./Search";
 import Main from "./Main";
 import "./styles.css";
 
@@ -16,6 +13,7 @@ export default function App() {
           <a
             href="https://github.com/ianikova/weather-react-app"
             target="_blank"
+            rel="noreferrer"
           >
             Open-source code
           </a>
