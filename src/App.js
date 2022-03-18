@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import ReactDOM from "react-dom";
+import WeatherSearch from "./WeatherSearch";
+import Navbar from "./Navbar";
+import Search from "./Search";
+import Main from "./Main";
+import "./styles.css";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Main />
+      <div class="navbar fixed-bottom signature">
+        <small>
+          <a href="https://github.com/ianikova/test-github" target="_blank">
+            Open-source code
+          </a>
+          , by Anna Ianikova
+        </small>
+      </div>
     </div>
   );
 }
-
-export default App;

@@ -1,0 +1,136 @@
+body {
+  background-image: url("https://images.pexels.com/photos/19670/pexels-photo.jpg?cs=srgb&dl=pexels-miguel-%C3%A1-padri%C3%B1%C3%A1n-19670.jpg&fm=jpg");
+  font-family: "Raleway", sans-serif !important;
+}
+
+i:hover {
+  color: grey;
+}
+
+ul {
+  display: block;
+  list-style-type: none;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  padding: 0;
+}
+
+li {
+  display: list-item;
+  text-align: -webkit-match-parent;
+}
+
+.top-cities {
+  color: #878787;
+  padding: 20px;
+  padding-bottom: 10px;
+  border-radius: 60px;
+}
+
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+}
+
+.logo {
+  width: 25px;
+  height: 25px;
+  background-color: transparent;
+}
+
+.search-form {
+  margin-top: 20px;
+}
+
+.main-city {
+  display: block;
+  padding-top: 10px;
+}
+
+.top-city-temperature {
+  font-size: 24px;
+  margin-top: 6px;
+}
+
+.top-city-units {
+  position: relative;
+  top: -14px;
+  font-size: 10px;
+}
+/*
+.main-temperature {
+  padding-top: 15px;
+}
+*/
+
+.farenheit {
+  color: #65bbce;
+}
+
+.units {
+  position: relative;
+  top: -22px;
+}
+
+.selected-temperature {
+  font-weight: bold;
+}
+
+.col-sm {
+  font-size: 20px;
+  color: #a5c0c6;
+}
+.fas-main {
+  font-size: 20px;
+}
+
+.fas-chosen {
+  font-size: 30px;
+}
+
+.chosen-city {
+  font-size: 30px;
+}
+
+.side-chosen-city {
+  margin-left: 50px;
+}
+
+.container-chosen-city {
+  padding: 15px;
+  margin: 50px auto;
+  border: solid 1px #878787;
+  border-radius: 10px;
+}
+
+.week-day-container {
+  max-width: 10% !important;
+}
+
+.minor-temperature {
+  font-size: 10px;
+}
+
+.day-of-the-week {
+  margin-top: 30px;
+  font-size: 20px;
+  padding-bottom: 15px;
+}
+
+.signature {
+  font-size: 10px;
+}
+
+.today-icon {
+  width: 80px;
+  height: 80px;
+}
+
+.day-icon {
+  width: 50px;
+  height: 50px;
+}
