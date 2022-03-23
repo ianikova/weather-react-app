@@ -10,16 +10,25 @@ i:hover {
 ul {
   display: block;
   list-style-type: none;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
-  margin-inline-start: 0px;
-  margin-inline-end: 0px;
-  padding: 0;
 }
 
 li {
   display: list-item;
   text-align: -webkit-match-parent;
+}
+
+.summary-description {
+  margin-bottom: 20px;
+  color: #878787;
+  font-size: small;
+}
+
+.main-row {
+  margin-top: 10px;
+}
+
+.secondary-row {
+  margin-left: 35px;
 }
 
 .top-cities {

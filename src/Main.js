@@ -84,6 +84,7 @@ export default function Main(props) {
                   type="search"
                   className="form-control search-city"
                   placeholder="Type a city"
+                  autoFocus="on"
                   onChange={changeInputCity}
                 />
               </div>
@@ -103,85 +104,83 @@ export default function Main(props) {
       </div>
 
       <div className="container container-chosen-city">
-        <div className="row">
-          <div className="col-4 side-chosen-city">
-            <div>
-              <h1 className="chosen-city">{city}</h1>
+        <div className="row main-row">
+          <div className="col-3 side-chosen-city">
+            <h1 className="chosen-city">{city}</h1>
+            <div className="summary-description">
               <h6 id="date-time">{todayDateTime}</h6>
-              <div className="row">
-                <div className="col-5">
-                  <ReactAnimatedWeather
-                    icon="CLEAR_DAY"
-                    color="black"
-                    size={50}
-                    animate={true}
-                  />
-                  <div className="main-temperature">
-                    <span className="temperature" id="temperature">
-                      {getTemperature(weather.temperature)}
-                    </span>
-                    <span className="units">
-                      <a
-                        href="/"
-                        id="celsius-link"
-                        className="selected-temperature"
-                        onClick={showCelsius}
-                      >
-                        °C
-                      </a>
-                      |
-                      <a href="/" id="fahrenheit-link" onClick={showFahrenheit}>
-                        °F
-                      </a>
-                    </span>
-                  </div>
-                </div>
-                <div className="col-6">
-                  <ul>
-                    <li>
-                      <em>
-                        <strong>
-                          <span id="weather-description">
-                            {weather.description}
-                          </span>
-                        </strong>
-                      </em>
-                    </li>
-                    <li>
-                      <em>
-                        Humidity: <span id="humidity">{weather.humidity}</span>%
-                      </em>
-                    </li>
-                    <li>
-                      <em>
-                        Max. temperature:{" "}
-                        <span id="max-temp">
-                          {getTemperature(weather.maxTemperature)}
-                        </span>
-                        °
-                      </em>
-                    </li>
-                    <li>
-                      <em>
-                        Min. temperature:{" "}
-                        <span id="min-temp">
-                          {getTemperature(weather.minTemperature)}
-                        </span>
-                        °
-                      </em>
-                    </li>
-                    <li>
-                      <em>
-                        Wind: <span id="wind">{weather.wind}</span> km/h
-                      </em>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+              <strong>
+                <span id="weather-description">{weather.description}</span>
+              </strong>
             </div>
           </div>
+        </div>
 
-          <div className="col-2 week-day-container">
+        <div className="row secondary-row">
+          <div className="col-1">
+            <ReactAnimatedWeather
+              icon="CLEAR_DAY"
+              color="black"
+              size={50}
+              animate={true}
+            />
+          </div>
+          <div>
+            <div className="main-temperature">
+              <span className="temperature" id="temperature">
+                {getTemperature(weather.temperature)}
+              </span>
+              <span className="units">
+                <a
+                  href="/"
+                  id="celsius-link"
+                  className="selected-temperature"
+                  onClick={showCelsius}
+                >
+                  °C
+                </a>
+                |
+                <a href="/" id="fahrenheit-link" onClick={showFahrenheit}>
+                  °F
+                </a>
+              </span>
+            </div>
+          </div>
+          <div className="col-3">
+            <ul>
+              <li>
+                <em>
+                  Humidity: <span id="humidity">{weather.humidity}</span>%
+                </em>
+              </li>
+              <li>
+                <em>
+                  Max. temperature:{" "}
+                  <span id="max-temp">
+                    {getTemperature(weather.maxTemperature)}
+                  </span>
+                  °
+                </em>
+              </li>
+              <li>
+                <em>
+                  Min. temperature:{" "}
+                  <span id="min-temp">
+                    {getTemperature(weather.minTemperature)}
+                  </span>
+                  °
+                </em>
+              </li>
+              <li>
+                <em>
+                  Wind: <span id="wind">{weather.wind}</span> km/h
+                </em>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div className="row secondary-row">
+          <div className="col-3 week-day-container">
             <div className="day-of-the-week" id="day-of-the-week-0">
               Mon
             </div>
@@ -199,7 +198,7 @@ export default function Main(props) {
               </span>
             </div>
           </div>
-          <div className="col-2 week-day-container">
+          <div className="col-3 week-day-container">
             <div className="day-of-the-week" id="day-of-the-week-1">
               Tue
             </div>
@@ -217,7 +216,7 @@ export default function Main(props) {
               </span>
             </div>
           </div>
-          <div className="col-2 week-day-container">
+          <div className="col-3 week-day-container">
             <div className="day-of-the-week" id="day-of-the-week-2">
               Wed
             </div>
@@ -235,7 +234,7 @@ export default function Main(props) {
               </span>
             </div>
           </div>
-          <div className="col-2 week-day-container">
+          <div className="col-3 week-day-container">
             <div className="day-of-the-week" id="day-of-the-week-3">
               Thur
             </div>
@@ -253,7 +252,7 @@ export default function Main(props) {
               </span>
             </div>
           </div>
-          <div className="col-2 week-day-container">
+          <div className="col-3 week-day-container">
             <div className="day-of-the-week" id="day-of-the-week-4">
               Fri
             </div>
@@ -272,7 +271,7 @@ export default function Main(props) {
             </div>
           </div>
 
-          <div className="col-2 week-day-container">
+          <div className="col-3 week-day-container">
             <div className="day-of-the-week" id="day-of-the-week-5">
               Sat
             </div>
