@@ -20,7 +20,6 @@ li {
 .summary-description {
   margin-bottom: 20px;
   color: #878787;
-  font-size: small;
 }
 
 .main-row {
@@ -29,6 +28,20 @@ li {
 
 .secondary-row {
   margin-left: 35px;
+}
+
+.WeatherForecastDay {
+  margin-top: 20px;
+  margin-left: 50px;
+}
+
+.main-icon {
+  width: 70px;
+  height: 70px;
+}
+
+.dayoftheweek-icon {
+  margin-top: 5px;
 }
 
 .top-cities {
@@ -70,11 +83,10 @@ li {
   top: -14px;
   font-size: 10px;
 }
-/*
+
 .main-temperature {
-  padding-top: 15px;
+  padding-top: 10px;
 }
-*/
 
 .farenheit {
   color: #65bbce;
@@ -121,7 +133,7 @@ li {
 }
 
 .minor-temperature {
-  font-size: 10px;
+  font-size: 30px;
 }
 
 .day-of-the-week {
