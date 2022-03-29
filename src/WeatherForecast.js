@@ -9,7 +9,7 @@ export default function WeatherForecast(props) {
   useEffect(() => {
     setLoaded(false);
     load();
-  }, [props.coordinates, load]);
+  }, [props.coordinates]);
 
   function handleResponse(response) {
     setLoaded(true);

@@ -9,7 +9,7 @@ export default function Weather(props) {
 
   useEffect(() => {
     search();
-  }, [props.defaultCity, search]);
+  }, [props.defaultCity]);
 
   function handleResponse(response) {
     setWeatherData({
