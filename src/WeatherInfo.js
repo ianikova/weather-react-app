@@ -7,7 +7,7 @@ export default function WeatherInfo(props) {
   return (
     <div className="WeatherInfo">
       <div className="row main-row">
-        <div className="col-3 side-chosen-city">
+        <div className="col-6 side-chosen-city">
           <h1 className="chosen-city">{props.data.city}</h1>
           <div className="summary-description">
             <h6 id="date-time">
@@ -28,7 +28,11 @@ export default function WeatherInfo(props) {
             </div>
 
             <div className="float-left">
-              <WeatherTemperature celsius={props.data.temperature} />
+              <WeatherTemperature
+                temperature={props.data.temperature}
+                unit={props.unit}
+                setUnit={props.setUnit}
+              />
             </div>
           </div>
         </div>

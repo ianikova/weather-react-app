@@ -32,16 +32,6 @@ li {
 
 .WeatherForecastDay {
   margin-top: 20px;
-  margin-left: 50px;
-}
-
-.main-icon {
-  width: 70px;
-  height: 70px;
-}
-
-.dayoftheweek-icon {
-  margin-top: 5px;
 }
 
 .top-cities {
@@ -71,17 +61,6 @@ li {
 .main-city {
   display: block;
   padding-top: 10px;
-}
-
-.top-city-temperature {
-  font-size: 24px;
-  margin-top: 6px;
-}
-
-.top-city-units {
-  position: relative;
-  top: -14px;
-  font-size: 10px;
 }
 
 .main-temperature {
@@ -114,7 +93,8 @@ li {
 }
 
 .chosen-city {
-  font-size: 30px;
+  font-size: solid 30px;
+  color: #245fb7;
 }
 
 .side-chosen-city {
@@ -124,8 +104,8 @@ li {
 .container-chosen-city {
   padding: 15px;
   margin: 50px auto;
-  border: solid 1px #878787;
-  border-radius: 10px;
+  border: solid 2px #dbe8ed;
+  border-radius: 15px;
 }
 
 .week-day-container {
@@ -154,4 +134,30 @@ li {
 .day-icon {
   width: 50px;
   height: 50px;
+}
+
+.WeatherForecast {
+  text-align: center;
+}
+
+.WeatherForecast-temperature-min {
+  opacity: 0.6;
+  margin-left: 5px;
+}
+
+.WeatherInfoTopCity {
+  text-align: center;
+}
+
+.top-city-temperature {
+  font-size: 20px;
+  margin-top: 6px;
+}
+
+.top-city-units {
+  top: -14px;
+}
+
+.topCityTitle {
+  color: #245fb7;
 }
