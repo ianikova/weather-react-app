@@ -90,3 +90,10 @@ li {
 .topCityTitle {
   color: #245fb7;
 }
+
+.temperature {
+  color: rgb(33, 33, 33);
+  font-size: 44px;
+  font-weight: 400;
+  line-height: 1;
+}
