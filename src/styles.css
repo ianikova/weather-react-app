@@ -10,6 +10,7 @@ i:hover {
 ul {
   display: block;
   list-style-type: none;
+  padding-inline-start: 0;
 }
 
 li {

@@ -27,6 +27,7 @@ export default function Weather(props) {
       date: new Date(response.data.dt * 1000),
       city: response.data.name,
     });
+    setCity(response.data.name);
   }
 
   function handleSubmit(event) {
@@ -77,6 +78,7 @@ export default function Weather(props) {
                   placeholder="Enter a city.."
                   className="form-control"
                   autoFocus="on"
+                  value={city}
                   onChange={handleCityChange}
                 />
               </div>
@@ -108,7 +110,7 @@ export default function Weather(props) {
       {weatherData.ready ? (
         <div className="container">
           <div className="top-cities">
-            <WeatherTopCities data={weatherData} units={units} />
+            <WeatherTopCities units={units} />
           </div>
         </div>
       ) : null}

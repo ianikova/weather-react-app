@@ -11,7 +11,7 @@ export default function WeatherTopCity(props) {
 
   useEffect(() => {
     search();
-  }, [city]);
+  }, [city, units]);
 
   function handleResponse(response) {
     setWeatherData({
