@@ -108,7 +108,7 @@ export default function Weather(props) {
       {weatherData.ready ? (
         <div className="container">
           <div className="top-cities">
-            <WeatherTopCities data={weatherData} />
+            <WeatherTopCities data={weatherData} units={units} />
           </div>
         </div>
       ) : null}

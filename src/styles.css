@@ -41,55 +41,8 @@ li {
   border-radius: 60px;
 }
 
-.temperature {
-  color: rgb(33, 33, 33);
-  font-size: 44px;
-  font-weight: 400;
-  line-height: 1;
-}
-
-.logo {
-  width: 25px;
-  height: 25px;
-  background-color: transparent;
-}
-
 .search-form {
   margin-top: 20px;
-}
-
-.main-city {
-  display: block;
-  padding-top: 10px;
-}
-
-.main-temperature {
-  padding-top: 10px;
-}
-
-.farenheit {
-  color: #65bbce;
-}
-
-.units {
-  position: relative;
-  top: -22px;
-}
-
-.selected-temperature {
-  font-weight: bold;
-}
-
-.col-sm {
-  font-size: 20px;
-  color: #a5c0c6;
-}
-.fas-main {
-  font-size: 20px;
-}
-
-.fas-chosen {
-  font-size: 30px;
 }
 
 .chosen-city {
@@ -108,32 +61,8 @@ li {
   border-radius: 15px;
 }
 
-.week-day-container {
-  max-width: 10% !important;
-}
-
-.minor-temperature {
-  font-size: 30px;
-}
-
-.day-of-the-week {
-  margin-top: 30px;
-  font-size: 20px;
-  padding-bottom: 15px;
-}
-
 .signature {
   font-size: 10px;
-}
-
-.today-icon {
-  width: 80px;
-  height: 80px;
-}
-
-.day-icon {
-  width: 50px;
-  height: 50px;
 }
 
 .WeatherForecast {
